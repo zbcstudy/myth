@@ -1,0 +1,1 @@
+MythTransactionFilter=org.dromara.myth.dubbo.filter.DubboMythTransactionFilter
