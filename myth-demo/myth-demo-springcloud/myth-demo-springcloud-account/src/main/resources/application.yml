@@ -5,23 +5,23 @@ server:
 
 
 spring:
-    datasource:
-        driver-class-name:  com.mysql.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/myth_account?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
-        username: root
-        password: 123456
-    application:
-      name: account-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/myth_account?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: 123456
+  application:
+    name: account-service
    #activemq:
         #   broker-url: tcp://120.76.52.162:61616
         #   user: happylife
         #   password: happylifeplat01
         #   trust-all: true
-   rabbitmq:
-      host: localhost
-      port: 5672
-      username: guest
-      password: guest
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
     #rocketmq:
           #namesrvAddr: localhost:9876
           #consumerGroupName: account
@@ -41,20 +41,20 @@ mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
 #${random.int[9000,9999]}
 eureka:
- client:
-     serviceUrl:
-       defaultZone: http://localhost:8761/eureka/
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
 
 org:
-  dromara :
-      myth :
-        serializer : kryo
-        repositorySupport : db
-        mythDbConfig :
-           driverClassName  : com.mysql.jdbc.Driver
-           url :  jdbc:mysql://127.0.0.1:3306/myth?useUnicode=true&amp;characterEncoding=utf8
-           username : root
-           password : 123456
+  dromara:
+    myth:
+      serializer: kryo
+      repositorySupport: db
+      mythDbConfig:
+        driverClassName: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/myth?useUnicode=true&amp;characterEncoding=utf8
+        username: root
+        password: 123456
 
        # repositorySupport : redis
        #         hostName  : 192.168.1.68
@@ -84,13 +84,13 @@ org:
 #   ribbon.NFLoadBalancerRuleClassName : com.netflix.loadbalancer.RandomRule
 
 logging:
-    level:
-        root: error
-        org.springframework.web: info
-        org.apache.ibatis: info
-        org.dromara.myth.bonuspoint: info
-        org.dromara.myth.lottery: debug
-        org.dromara.myth: debug
+  level:
+    root: error
+    org.springframework.web: info
+    org.apache.ibatis: info
+    org.dromara.myth.bonuspoint: info
+    org.dromara.myth.lottery: debug
+    org.dromara.myth: debug
 
-    path: "./logs"
+  path: "./logs"
 
