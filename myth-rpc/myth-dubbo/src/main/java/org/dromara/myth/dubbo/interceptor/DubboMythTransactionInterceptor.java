@@ -30,6 +30,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
+ * 基于dubbo实现的分布式事务拦截器
  * DubboMythTransactionInterceptor.
  *
  * @author xiaoyu

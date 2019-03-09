@@ -67,6 +67,8 @@ public class InventoryServiceImpl implements InventoryService {
         }
         entity.setTotalInventory(entity.getTotalInventory() - inventoryDTO.getCount());
         final int decrease = inventoryMapper.decrease(entity);
+        //测试出现异常的情况
+        int i = 1 / 0;
         if (decrease != 1) {
             throw new MythRuntimeException("库存不足");
         }
