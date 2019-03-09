@@ -47,6 +47,7 @@ public class RabbitmqSendServiceImpl implements MythMqSendService, RabbitTemplat
 
     @Override
     public void sendMessage(final String destination, final Integer pattern, final byte[] message) {
+        System.out.println("发送消息");
         amqpTemplate.convertAndSend(destination, message);
     }
 
@@ -64,9 +65,9 @@ public class RabbitmqSendServiceImpl implements MythMqSendService, RabbitTemplat
     @Override
     public void confirm(final CorrelationData correlationData, final boolean ack, final String cause) {
         if (ack) {
-            LogUtil.info(LOGGER, () -> "rabbit mq send message success！");
+            LogUtil.debug(LOGGER, () -> "rabbit mq send message success！");
         } else {
-            LogUtil.info(LOGGER, () -> "rabbit mq send message fail！" + cause + " retry send!");
+            LogUtil.debug(LOGGER, () -> "rabbit mq send message fail！" + cause + " retry send!");
 
         }
     }

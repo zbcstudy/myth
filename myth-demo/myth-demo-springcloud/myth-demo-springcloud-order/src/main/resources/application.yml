@@ -89,10 +89,10 @@ logging:
 
 inventory-service:
   ribbon:
-    MaxAutoRetries: 0
+    MaxAutoRetries: 1
     MaxAutoRetriesNextServer: 0
 
 account-service:
   ribbon:
-  MaxAutoRetries: 0
-  MaxAutoRetriesNextServer: 0
+    MaxAutoRetries: 1
+    MaxAutoRetriesNextServer: 0

@@ -62,6 +62,9 @@ public class InventoryServiceImpl implements InventoryService {
         entity.setTotalInventory(entity.getTotalInventory() - inventoryDTO.getCount());
 
         final int decrease = inventoryMapper.decrease(entity);
+        if (decrease == 1) {
+            throw new RuntimeException("模拟异常");
+        }
         if (decrease != 1) {
             throw new MythRuntimeException("spring cloud inventory-service 库存不足!");
         }

@@ -1,0 +1,13 @@
+在运行测试代码时，发现了一个问题：
+    //扣除用户余额
+    AccountDTO accountDTO = new AccountDTO();
+    accountDTO.setAmount(order.getTotalAmount());
+    accountDTO.setUserId(order.getUserId());
+    accountService.payment(accountDTO);
+    //进入扣减库存操作
+    InventoryDTO inventoryDTO = new InventoryDTO();
+    inventoryDTO.setCount(order.getCount());
+    inventoryDTO.setProductId(order.getProductId());
+    inventoryService.decrease(inventoryDTO);
+    LOGGER.debug("=============Myth分布式事务执行完成！=======");
+当扣除余额的操作未发生异常，而减库存操作发生了异常时，扣除余额的数据库操作正常进行提交，并不会回滚。

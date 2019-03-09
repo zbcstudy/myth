@@ -24,5 +24,6 @@ logging:
         org.dromara.myth.lottery: debug
         org.dromara.myth: debug
         io.netty: info
+        org.self4j: info
     path: "./logs"
 

@@ -33,6 +33,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author xiaoyu
@@ -62,6 +63,7 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     @Myth
+    @Transactional
     public void makePayment(Order order) {
         //做库存和资金账户的检验工作 这里只是demo 。。。
         final AccountDO accountDO = accountService.findByUserId(order.getUserId());
