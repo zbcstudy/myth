@@ -23,6 +23,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * 注解式声明分布式事务
  * The interface Myth.
  */
 @Retention(RetentionPolicy.RUNTIME)

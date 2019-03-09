@@ -44,7 +44,7 @@
         <property name="mythDbConfig">
             <bean class="org.dromara.myth.common.config.MythDbConfig">
                 <property name="url"
-                          value="jdbc:mysql://192.168.1.98:3306/myth?useUnicode=true&amp;characterEncoding=utf8"/>
+                          value="jdbc:mysql://127.0.0.1:3306/myth?useUnicode=true&amp;characterEncoding=utf8"/>
                 <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
                 <property name="username" value="root"/>
                 <property name="password" value="123456"/>
@@ -53,10 +53,10 @@
     </bean>
 
     <import resource="spring-dubbo.xml"/>
-    <import resource="spring-aliyunmq.xml"/>
+    <!--<import resource="spring-aliyunmq.xml"/>-->
 
     <!--<import resource="spring-rocketmq.xml"/>-->
-    <!--    <import resource="spring-rabbitmq.xml"/>-->
+        <import resource="spring-rabbitmq.xml"/>
     <!--    <import resource="spring-kafka.xml"/>-->
     <!--
         <import resource="spring-activemq.xml"/>

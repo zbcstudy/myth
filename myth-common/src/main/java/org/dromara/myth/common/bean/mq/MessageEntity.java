@@ -23,6 +23,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * 发送消息实体类
  * MessageEntity.
  * @author xiaoyu(Myth)
  */
@@ -31,6 +32,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class MessageEntity {
 
+    //事务ID
     private String transId;
 
     private MythInvocation mythInvocation;

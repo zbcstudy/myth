@@ -4,27 +4,27 @@ server:
   address: 0.0.0.0
 
 spring:
-    datasource:
-        driver-class-name:  com.mysql.jdbc.Driver
-        url: jdbc:mysql://192.168.1.98:3306/myth_account?useUnicode=true&characterEncoding=utf8
-        username: root
-        password: 123456
-    #activemq:
-    #   broker-url: tcp://120.76.52.162:61616
-    #   user: happylife
-    #   password: happylifeplat01
-    #   trust-all: true
-    #rabbitmq:
-    #    host: localhost
-    #    port: 5672
-    #    username: guest
-    #    password: guest
-    aliyunmq:
-        broker-url: http://onsaddr-internet.aliyun.com/rocketmq/nsaddr4client-internet
-        accessKey: LTAI44DGK0oAutoj
-        secretKey: RBXTnPSVxHYfrn2IFFoVtgExZdw1M2
-        topic: ORDER_FLOW_BQ
-        consumerId: CID_ORDER_FLOW_BQ_ACCOUNT
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/myth_account?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+  #activemq:
+  #   broker-url: tcp://120.76.52.162:61616
+  #   user: happylife
+  #   password: happylifeplat01
+  #   trust-all: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#    aliyunmq:
+#        broker-url: http://onsaddr-internet.aliyun.com/rocketmq/nsaddr4client-internet
+#        accessKey: LTAI44DGK0oAutoj
+#        secretKey: RBXTnPSVxHYfrn2IFFoVtgExZdw1M2
+#        topic: ORDER_FLOW_BQ
+#        consumerId: CID_ORDER_FLOW_BQ_ACCOUNT
 #    rocketmq:
 #            namesrvAddr: localhost:9876
 #            consumerGroupName: CID_ORDER_FLOW_BQ_ACCOUNT
@@ -45,14 +45,14 @@ mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
 
 logging:
-    level:
-        root: error
-        org.springframework.web: info
-        org.apache.ibatis: info
-        org.dromara.myth.bonuspoint: info
-        org.dromara.myth.lottery: debug
-        org.dromara.myth: debug
-        io.netty: info
+  level:
+    root: error
+    org.springframework.web: info
+    org.apache.ibatis: info
+    org.dromara.myth.bonuspoint: info
+    org.dromara.myth.lottery: debug
+    org.dromara.myth: debug
+    io.netty: info
 
-    path: "./logs"
+  path: "./logs"
 
